@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prathibha Boyapalli - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .header-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f5f5f5;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-profile {
+            display: flex;
+            align-items: center;
+        }
+        .header-profile img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .header-profile-info h1 {
+            margin: 0;
+            font-size: 20px;
+	    color: #615d5d;
+        }
+        .header-profile-info p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .header-nav {
+            display: flex;
+            gap: 20px;
+        }
+        .header-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .sidebar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation Bar -->
+    <div class="header-bar">
+        <div class="header-profile">
+            <img src="profile.jpeg" alt="Profile Picture">
+            <div class="header-profile-info">
+                <h1>Prathibha Boyapalli</h1>
+                <p>MS Grad University of Michigan  |  Software Engineer  |   Full Stack Software Developer</p>
+            </div>
+        </div>
+        <div class="header-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section hero">
+            <h1>Hello, I’m Prathibha</h1>
+            <p>A passionate software developer crafting secure, scalable solutions.</p>
+            <a href="#projects" class="btn">See My Work</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>I’m a Computer Science Master’s graduate from the University of Michigan, specializing in Java development, web technologies, and distributed systems. I thrive on building efficient, user-focused applications that solve complex challenges.</p>
+            <p><strong>Education:</strong> Master’s in Computer Science, University of Michigan</p>
+            <p><strong>Activities:</strong> Graduate Research Assistant (Adv. CN), Application Developer (CIT), Teaching Assistant (Adv. CN & CYB)</p>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Cognizant Technology Solutions</h3>
+                <p><em>Programmer Analyst/Junior Software Engineer | Dec 2020 - Dec 2022</em></p>
+                <ul>
+                    <li>Engineered scalable Liferay-based web apps with Java, enhancing UX and functionality.</li>
+                    <li>Developed custom CKEditor modules using JavaScript/CSS for content management.</li>
+                    <li>Mitigated security vulnerabilities, adhering to OWASP and PCI-DSS standards.</li>
+                    <li>Automated CI/CD pipelines with Jenkins for efficient deployments.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Cognizant Technology Solutions</h3>
+                <p><em>Java Intern | Dec 2019 - Mar 2020</em></p>
+                <ul>
+                    <li>Built Java components, improving system efficiency by 15%.</li>
+                    <li>Designed responsive UI features with HTML, CSS, and JavaScript.</li>
+                    <li>Resolved 30+ critical issues through QA testing and debugging.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Synergiz Global Services</h3>
+                <p><em>Software Distribution Intern | Jun 2019 - Aug 2019</em></p>
+                <ul>
+                    <li>Implemented a gRPC network layer in C++ for 50+ concurrent clients.</li>
+                    <li>Reduced task latency by 35% using shared memory IPC.</li>
+                    <li>Built a worker health probing system with graceful shutdowns.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>AuthGuard</h3>
+                    <p>A secure user authentication and authorization system built with Java, Spring Boot, and Spring MVC. Implements RESTful APIs for login workflows and session management with a sleek Bootstrap interface.</p>
+                    <a href="https://github.com/Prathibha-B" target="_blank">GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Data Insights Analyzer</h3>
+                    <p>Designed a statistical data analysis tool using SAS JMP Pro. Leveraged clustering and regression to extract actionable insights from large datasets, supporting strategic business decision-making.</p>
+                    <a href="https://github.com/Prathibha-B" target="_blank">GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Distributed KV Store</h3>
+                    <p>Built a fault-tolerant key-value store utilizing sharding and Raft consensus. Ensured high availability, consistency, and 99.99% uptime with dynamic reconfiguration and recovery mechanisms.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li><strong>Development:</strong> Java, C, SQL, Oracle, HTML, CSS, JavaScript, jQuery, React</li>
+                <li><strong>Tools:</strong> Liferay, Jenkins, Jira, Microsoft Office, JMP</li>
+                <li><strong>Other:</strong> Agile Methodologies, Unit Testing, CI/CD, Debugging, AWS</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p><a href="mailto:boyapalliprathibha306@gmail.com">boyapalliprathibha306@gmail.com</a></p>
+            <p>+1 (463)-273-6225</p>
+            <p><a href="https://www.linkedin.com/in/prathibha-boyapalli-a46391193/" target="_blank">LinkedIn</a></p>
+            <p><a href="https://github.com/Prathibha-B" target="_blank">GitHub</a></p>
+        </section>
+    </main>
+
+    <script>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('.header-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
