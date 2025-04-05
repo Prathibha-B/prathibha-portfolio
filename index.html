@@ -60,6 +60,71 @@
         .sidebar {
             display: none;
         }
+        .card-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            width: 200px;
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background: rgba(255, 255, 255, 0.5);
+            position: relative;
+        }
+        .card img {
+            width: 100%;
+            display: block;
+            opacity: 0.7;
+        }
+        .card h4 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            font-size: 16px;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .ecdc-card {
+            position: relative;
+        }
+        .ecdc-card img:first-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            color: #615d5d;
+        }
+        .close {
+            float: right;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -114,7 +179,7 @@
         <section id="experience" class="section">
             <h2>Experience</h2>
             <div class="experience-item">
-                <img src="Cognizant.png" alt="Profile Picture"> 
+                <img src="Cognizant.png"> 
                 <h3>Cognizant Technology Solutions</h3>
                 <p><em>Programmer Analyst/Junior Software Engineer | Dec 2020 - Dec 2022</em></p>
                 <ul>
@@ -125,7 +190,7 @@
                 </ul>
             </div>
             <div class="experience-item">
-                <img src="Cognizant.png" alt="Profile Picture"> 
+                <img src="Cognizant.png"> 
                 <h3>Cognizant Technology Solutions</h3>
                 <p><em>Java Intern | Dec 2019 - Mar 2020</em></p>
                 <ul>
@@ -143,7 +208,56 @@
                     <li>Built a worker health probing system with graceful shutdowns.</li>
                 </ul>
             </div>
+             <!-- Academic Experience -->
+             <h3>📘 Academic</h3>
+             <h4>Experiences Beyond the Classroom</h4>
+             <p>During my time in University Of Michigan, I’ve taken on opportunities that have helped me grow both personally and professionally. From assisting professors in technical courses to supporting young children in early development, these roles have allowed me to apply my skills in real-world settings, strengthen my communication, and become a more well-rounded individual.</p>
+            <div class="card-container">
+                <div class="card" onclick="openModal('cybersecurity')">
+                    <img src="cybersecurity.png" alt="Cybersecurity TA">
+                    <h4>Cybersecurity TA | Grader</h4>
+                </div>
+                <div class="card" onclick="openModal('networking')">
+                    <img src="Networking.png" alt="Computer Networking TA">
+                    <h4>Adv.CN TA | Grader</h4>
+                </div>
+                <div class="card ecdc-card" onclick="openModal('ecdc')">
+                    <img src="ECDC2.png" alt="Early Childhood Development Center TA">
+                    <img src="ECDC.png" alt="Early Childhood Development Center TA">
+                    <h4>ECDC Teacher Assistant</h4>
+                </div>
+            </div>
         </section>
+        <div id="cybersecurity" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('cybersecurity')">&times;</span>
+                <h4>Cybersecurity Teacher Assistant | Grader</h4>
+                <p>Stepping into the role of a Cybersecurity Teacher's Assistant was more than just an academic responsibility—it became a journey of deep learning and mentorship 🧑‍🏫🔐. Each week, I worked closely with students, helping them grasp complex cybersecurity concepts and guiding them through hands-on lab exercises 💻🛡️. These sessions not only reinforced my own understanding of network security, encryption, and ethical hacking tools 🧠🔍 but also sharpened my ability to explain technical content in a clear, approachable way 💬✨.</p>
+                <p>Beyond one-on-one support, I was also responsible for grading assignments and lab reports 📝📊. Rather than just assigning marks, I focused on giving detailed, constructive feedback—encouraging students to think critically, correct mistakes, and build stronger foundational knowledge 🎯🧩. This process taught me the importance of patience, clarity, and empathy.</p>
+                <p>Overall, this role not only strengthened my cybersecurity skills but also boosted my confidence as a communicator and collaborator🤝📢.</p>
+            </div>
+        </div>
+
+        <div id="networking" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('networking')">&times;</span>
+                <h4>Advanced Computer Networking Teacher Assistant | Grader</h4>
+                <p>Following my experience as a Cybersecurity Teacher's Assistant, I continued supporting technical coursework—this time focusing on core networking principles such as TCP/IP, routing, and subnetting 🌐📡. I assisted students during lab sessions, helping them troubleshoot configuration issues and work through exercises using tools like Wireshark and Linux systems 🧪🐧.</p>
+                <p>In this role, I also contributed to creating assignments and lab materials that aligned with the course objectives ✍️📂. I was responsible for grading submissions and offering constructive feedback that encouraged deeper understanding 📘💬.</p>
+                <p> Overall, this role further strengthened my technical knowledge in networking and sharpened my ability to communicate complex ideas clearly 🤝🔧.</p>
+            </div>
+        </div>
+
+        <div id="ecdc" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('ecdc')">&times;</span>
+                <h4>Early Childhood Development Center Teacher Assistant</h4>
+                <p> </p>
+                <p>In my role at the Early Childhood Development Center, I supported young children’s learning and growth through interactive activities and problem-solving exercises 🌼🧸. While not directly related to software development, this experience enhanced my ability to communicate effectively, simplify complex ideas, and remain adaptable in fast-changing environments—skills that translate seamlessly to my work as a developer.</p>
+                <p>Collaborating with educators to create a nurturing environment refined my organizational and teamwork skills, while working closely with children on tasks like pattern recognition and social skills strengthened my patience and attention to detail, qualities I bring into debugging and optimizing code 🧩💻.</p>
+                <p>This role has helped me grow as a communicator, listener, and problem-solver—traits I use daily when collaborating with teams and ensuring a seamless user experience 🧑‍💻💡.</p>
+            </div>
+        </div>
 
         <!-- Projects Section -->
         <section id="projects" class="section">
@@ -198,6 +312,13 @@
                 });
             });
         });
+
+        function openModal(id) {
+            document.getElementById(id).style.display = 'flex';
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
     </script>
 </body>
 </html>
