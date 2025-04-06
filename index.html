@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prathibha Boyapalli - Portfolio</title>
@@ -65,6 +66,19 @@
             gap: 20px;
             flex-wrap: wrap;
         }
+        .card-exp {
+            width: 800px;
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background: rgba(255, 255, 255, 0.5);
+            position: relative;
+        }
+        .card-exp p {
+            color: black;
+        }
         .card {
             width: 200px;
             cursor: pointer;
@@ -125,13 +139,283 @@
             float: right;
             cursor: pointer;
         }
+        .dark-card {
+    background-color: #1e1e1e;
+    border: 1px solid #2a2a2a;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,255,255,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #ffffff;
+  }
+
+  .dark-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(0,255,255,0.3);
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .company-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    filter: brightness(1.2);
+  }
+
+  .dark-card h3 {
+    margin-top: 10px;
+    color: #00ffff;
+  }
+
+  .dark-card p em {
+    color: #bbbbbb;
+    font-size: 14px;
+  }
+
+  .dark-card ul {
+    padding-left: 20px;
+  }
+
+  .dark-card ul li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  .card-container-academic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+  .card-academic {
+    background-color: #1e1e1e;
+    border: 1px solid #2a2a2a;
+    border-radius: 15px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0,255,255,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card-academic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0,255,255,0.3);
+  }
+
+  .card-academic img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    filter: brightness(1.2);
+  }
+
+  .card-academic h4 {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .ecdc-img-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .ecdc-img-wrapper img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 6px;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+  }
+
+  /* Modal container */
+  .modal-content.fancy-modal {
+    background: rgba(20, 20, 30, 0.95);
+    top: 60px;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 18px;
+    width: 90%;
+    max-width: 700px;
+    color: #ffffff;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .modal-content.fancy-modal:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+  }
+
+  /* Close button */
+  .modal-content .close {
+    color: #00ffff;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+
+  .modal-content .close:hover {
+    color: #ff4f4f;
+  }
+
+  .modal-content h4 {
+    font-size: 22px;
+    color: #00ffff;
+    margin-bottom: 15px;
+  }
+
+  .modal-content p {
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-size: 15px;
+  }
+  ul li {
+    list-style: none;
+}
+
+  @media (max-width: 600px) {
+    .modal-content.fancy-modal {
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .modal-content h4 {
+      font-size: 18px;
+    }
+  }
+  .contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #111827, #1f2937);
+  color: #ffffff;
+}
+
+.contact-card {
+  background: rgba(30, 41, 59, 0.85);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 18px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+}
+
+.contact-card h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #00ffff;
+}
+
+.contact-card p {
+  font-size: 16px;
+  margin: 12px 0;
+}
+
+.contact-card a {
+  color: #80dfff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-card a:hover {
+  color: #00ffff;
+  text-decoration: underline;
+}
+
+.contact-card i {
+  margin-right: 10px;
+  color: #00ffff;
+}
+/* Sidebar Profile */
+.sidebar-profile {
+  position: absolute;
+  top: 130px;
+  left: 70px;
+  width: 100px;
+  height: auto;
+ 
+  
+  text-align: center;
+  padding: 20px;
+  z-index: 999;
+ 
+}
+
+.sidebar-profile img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: transparent;
+  
+}
+
+
+@media (max-width: 768px) {
+  .sidebar-profile {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: none;
+    border-right: none;
+  }
+
+  main {
+    margin-left: 0;
+  }
+}
+main {
+  margin-left: 270px; /* Shift the content to the right of the sidebar */
+}
+
+
     </style>
 </head>
 <body>
     <!-- Header Navigation Bar -->
     <div class="header-bar">
         <div class="header-profile">
-            <img src="profile.jpeg" alt="Profile Picture">
             <div class="header-profile-info">
                 <h1>Prathibha Boyapalli</h1>
                 <p>MS Grad University of Michigan  |  Software Engineer  |   Full Stack Software Developer</p>
@@ -146,7 +430,10 @@
             <a href="#contact">Contact</a>
         </div>
     </div>
-
+    <aside class="sidebar-profile">
+        <img src="profile.jpeg" alt="Profile Picture">
+       
+      </aside>
     <!-- Main Content -->
     <main>
         <!-- Home Section -->
@@ -176,88 +463,152 @@
 
 
         <!-- Experience Section -->
-        <section id="experience" class="section">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <img src="Cognizant.png"> 
-                <h3>Cognizant Technology Solutions</h3>
-                <p><em>Programmer Analyst/Junior Software Engineer | Dec 2020 - Dec 2022</em></p>
-                <ul>
-                    <li>Engineered scalable Liferay-based web apps with Java, enhancing UX and functionality.</li>
-                    <li>Developed custom CKEditor modules using JavaScript/CSS for content management.</li>
-                    <li>Mitigated security vulnerabilities, adhering to OWASP and PCI-DSS standards.</li>
-                    <li>Automated CI/CD pipelines with Jenkins for efficient deployments.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <img src="Cognizant.png"> 
-                <h3>Cognizant Technology Solutions</h3>
-                <p><em>Java Intern | Dec 2019 - Mar 2020</em></p>
-                <ul>
-                    <li>Built Java components, improving system efficiency by 15%.</li>
-                    <li>Designed responsive UI features with HTML, CSS, and JavaScript.</li>
-                    <li>Resolved 30+ critical issues through QA testing and debugging.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Synergiz Global Services</h3>
-                <p><em>Software Distribution Intern | Jun 2019 - Aug 2019</em></p>
-                <ul>
+        <section id="experience" class="section" style=" color: #ffffff;padding: 40px 20px;">
+            <h2 style="color: #00ffff; text-align: center; font-size: 28px;">Experience</h2>
+            <div class="card-container">
+          
+              <!-- Cognizant Full-time -->
+              <div class="experience-item" onclick="openModal('Cognizant')">
+                <div class="card-exp dark-card">
+                  <img src="Cognizant.png" alt="Cognizant" class="company-logo"> 
+                  <h3>Cognizant Technology Solutions</h3>
+                  <p><em>Programmer Analyst / Junior Software Engineer | Dec 2020 - Dec 2022</em></p>
+                  <ul>
+                    <li>Engineered scalable Liferay-based web apps using Java.</li>
+                    <li>Developed custom CKEditor modules using JavaScript/CSS.</li>
+                    <li>Mitigated vulnerabilities following OWASP & PCI-DSS standards.</li>
+                    <li>Automated CI/CD pipelines using Jenkins.</li>
+                  </ul>
+                </div>
+              </div>
+          
+              <!-- Cognizant Internship -->
+              <div class="experience-item" onclick="openModal('Cognizant_intern')">
+                <div class="card-exp dark-card">
+                  <img src="Cognizant.png" alt="Cognizant Intern" class="company-logo"> 
+                  <h3>Cognizant Technology Solutions</h3>
+                  <p><em>Java Intern | Dec 2019 - Mar 2020</em></p>
+                  <ul>
+                    <li>Built Java components, increasing system efficiency by 15%.</li>
+                    <li>Designed responsive UIs with HTML, CSS, and JavaScript.</li>
+                    <li>Resolved 30+ critical issues via QA testing and debugging.</li>
+                  </ul>
+                </div>
+              </div>
+          
+              <!-- Synergiz Global -->
+              <div class="experience-item" onclick="openModal('Synergiz')">
+                <div class="card-exp dark-card">
+                  <h3>Synergiz Global Services</h3>
+                  <p><em>Software Distribution Intern | Jun 2019 - Aug 2019</em></p>
+                  <ul>
                     <li>Implemented a gRPC network layer in C++ for 50+ concurrent clients.</li>
                     <li>Reduced task latency by 35% using shared memory IPC.</li>
                     <li>Built a worker health probing system with graceful shutdowns.</li>
-                </ul>
+                  </ul>
+                </div>
+              </div>
             </div>
              <!-- Academic Experience -->
-             <h3>📘 Academic</h3>
-             <h4>Experiences Beyond the Classroom</h4>
-             <p>During my time in University Of Michigan, I’ve taken on opportunities that have helped me grow both personally and professionally. From assisting professors in technical courses to supporting young children in early development, these roles have allowed me to apply my skills in real-world settings, strengthen my communication, and become a more well-rounded individual.</p>
-            <div class="card-container">
-                <div class="card" onclick="openModal('cybersecurity')">
+             <section id="academic" style="color: #ffffff; padding: 40px 20px;">
+                <h3 style="color: #00ffff; text-align: center; font-size: 28px;">📘 Academic</h3>
+                <h4 style="text-align: center; font-weight: 400;">Experiences Beyond the Classroom</h4>
+                <p style="max-width: 800px; margin: 0 auto 30px; text-align: center;">
+                  During my time at the University of Michigan, I’ve taken on opportunities that helped me grow both personally and professionally. From assisting professors in technical courses to supporting young children in early development, these roles have strengthened my communication and broadened my perspective.
+                </p>
+              
+                <div class="card-container-academic">
+                  <!-- Cybersecurity TA -->
+                  <div class="card-academic" onclick="openModal('cybersecurity')">
                     <img src="cybersecurity.png" alt="Cybersecurity TA">
                     <h4>Cybersecurity TA | Grader</h4>
-                </div>
-                <div class="card" onclick="openModal('networking')">
+                  </div>
+              
+                  <!-- Networking TA -->
+                  <div class="card-academic" onclick="openModal('networking')">
                     <img src="Networking.png" alt="Computer Networking TA">
                     <h4>Adv.CN TA | Grader</h4>
-                </div>
-                <div class="card ecdc-card" onclick="openModal('ecdc')">
-                    <img src="ECDC2.png" alt="Early Childhood Development Center TA">
-                    <img src="ECDC.png" alt="Early Childhood Development Center TA">
+                  </div>
+              
+                  <!-- ECDC -->
+                  <div class="card-academic ecdc-card" onclick="openModal('ecdc')">
+                    <div class="ecdc-img-wrapper">
+                      <img src="ECDC2.png" alt="ECDC">
+                      <img src="ECDC.png" alt="ECDC">
+                    </div>
                     <h4>ECDC Teacher Assistant</h4>
+                  </div>
                 </div>
-            </div>
+              </section>
         </section>
+        
+        <div id="Cognizant" class="modal">
+            <div class="modal-content fancy-modal">
+              <span class="close" onclick="closeModal('Cognizant')">&times;</span>
+              <h4>Cognizant Technology Solutions</h4>
+              <h2>Programmer Analyst / Junior Software Engineer<br><em>Dec 2020 - Dec 2022</em></h2>
+              <p>At Cognizant, I played a key role in developing scalable Liferay-based web applications using core Java 🧱💻. My responsibilities included designing, developing, and implementing new functionalities that improved system performance and user engagement. I used Java extensively for backend logic, building out APIs and service layers to enable seamless integration with front-end components. I also utilized Oracle databases for efficient data storage, ensuring smooth communication between the database and application layers. On the front end, I developed custom CKEditor modules, enhancing content management systems with JavaScript, HTML, and CSS 🎨⚙️. I focused on creating responsive and dynamic user interfaces that improved usability and performance. I worked closely with the front-end team to implement new UI features and refine existing ones, ensuring that they were both visually appealing and functional across devices.</p>
+              <p>During my time at Cognizant, I was also tasked with improving the security and scalability of the applications. This included addressing vulnerabilities based on OWASP and PCI-DSS standards 🔐🛡️, and performing performance optimizations to ensure applications could handle increased traffic. I collaborated with cross-functional teams—including the ServiceNow team, build team, and deployment team—to ensure smooth delivery of features. With the build team, I helped streamline the integration process, focusing on creating robust CI/CD pipelines using Jenkins 🚀🔁, and worked with the deployment team to automate deployment processes, reducing the potential for errors.</p>
+              <p>This role gave me a strong foundation in both backend Java development and front-end technologies, allowing me to develop, enhance, and optimize enterprise-level applications while ensuring top-tier security and performance 🧠🧩.</p>
+             </div>
+          </div>
+          
+          <!-- ☕ Cognizant Internship -->
+          <div id="Cognizant_intern" class="modal">
+            <div class="modal-content fancy-modal">
+              <span class="close" onclick="closeModal('Cognizant_intern')">&times;</span>
+              <h4>Cognizant Technology Solutions</h4>
+              <h2>Java Intern<br><em>Dec 2019 - Mar 2020</em></h2>
+              <p>As an Intern, I developed core Java components that improved system efficiency by 15% ⚙️📈. My work focused on building Spring Boot-based applications and implementing microservices to ensure a modular and scalable system architecture. I also applied the MVC model to structure the applications for better maintainability and separation of concerns.</p>
+              <p>On the front-end side, I designed and implemented responsive UI elements using HTML, CSS, and JavaScript 🧩📱, ensuring seamless user experiences across various devices and browsers.</p>
+              <p>I gained hands-on experience with debugging and QA testing, resolving over 30+ issues that directly improved both app performance and user experience 🔍🛠️. This internship gave me a solid foundation in full-stack development, helping me expand my expertise into both backend and frontend engineering 🌱👩‍💻.</p>
+            </div>
+          </div>
+          
+          <!-- 🔧 Synergiz Global -->
+          <div id="Synergiz" class="modal">
+            <div class="modal-content fancy-modal">
+              <span class="close" onclick="closeModal('Synergiz')">&times;</span>
+              <h4>Synergiz Global Services</h4>
+              <h2>Software Distribution Intern<br><em>Jun 2019 - Aug 2019</em></h2>
+              <p>At Synergiz, I developed a scalable gRPC-based network layer in C++ to handle over 50 concurrent clients 🔌🧠. I significantly reduced task latency by 35% by introducing shared memory inter-process communication 💾⚡.</p>
+              <p>I also built a worker health probing system with graceful shutdown logic to ensure system stability and uptime even under dynamic loads 🛡️🌀. This experience sharpened my systems programming skills and gave me real-time performance tuning exposure.</p>
+            </div>
+          </div>
+        
         <div id="cybersecurity" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('cybersecurity')">&times;</span>
-                <h4>Cybersecurity Teacher Assistant | Grader</h4>
-                <p>Stepping into the role of a Cybersecurity Teacher's Assistant was more than just an academic responsibility—it became a journey of deep learning and mentorship 🧑‍🏫🔐. Each week, I worked closely with students, helping them grasp complex cybersecurity concepts and guiding them through hands-on lab exercises 💻🛡️. These sessions not only reinforced my own understanding of network security, encryption, and ethical hacking tools 🧠🔍 but also sharpened my ability to explain technical content in a clear, approachable way 💬✨.</p>
-                <p>Beyond one-on-one support, I was also responsible for grading assignments and lab reports 📝📊. Rather than just assigning marks, I focused on giving detailed, constructive feedback—encouraging students to think critically, correct mistakes, and build stronger foundational knowledge 🎯🧩. This process taught me the importance of patience, clarity, and empathy.</p>
-                <p>Overall, this role not only strengthened my cybersecurity skills but also boosted my confidence as a communicator and collaborator🤝📢.</p>
+            <div class="modal-content fancy-modal">
+              <span class="close" onclick="closeModal('cybersecurity')">&times;</span>
+              <h4>Cybersecurity Teacher Assistant | Grader</h4>
+              <p>Stepping into the role of a Cybersecurity Teacher's Assistant was more than just an academic responsibility—it became a journey of deep learning and mentorship 🧑‍🏫🔐. Each week, I worked closely with students, helping them grasp complex cybersecurity concepts and guiding them through hands-on lab exercises 💻🛡️.</p>
+              <p>These sessions not only reinforced my own understanding of network security, encryption, and ethical hacking tools 🧠🔍 but also sharpened my ability to explain technical content in a clear, approachable way 💬✨.</p>
+              <p>Beyond one-on-one support, I was also responsible for grading assignments and lab reports 📝📊. Rather than just assigning marks, I focused on giving detailed, constructive feedback—encouraging students to think critically and build stronger foundational knowledge 🎯🧩.</p>
+              <p>This role not only strengthened my cybersecurity skills but also boosted my confidence as a communicator and collaborator 🤝📢.</p>
             </div>
-        </div>
-
-        <div id="networking" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('networking')">&times;</span>
-                <h4>Advanced Computer Networking Teacher Assistant | Grader</h4>
-                <p>Following my experience as a Cybersecurity Teacher's Assistant, I continued supporting technical coursework—this time focusing on core networking principles such as TCP/IP, routing, and subnetting 🌐📡. I assisted students during lab sessions, helping them troubleshoot configuration issues and work through exercises using tools like Wireshark and Linux systems 🧪🐧.</p>
-                <p>In this role, I also contributed to creating assignments and lab materials that aligned with the course objectives ✍️📂. I was responsible for grading submissions and offering constructive feedback that encouraged deeper understanding 📘💬.</p>
-                <p> Overall, this role further strengthened my technical knowledge in networking and sharpened my ability to communicate complex ideas clearly 🤝🔧.</p>
+          </div>
+          
+          <!-- 🌐 Networking Modal -->
+          <div id="networking" class="modal">
+            <div class="modal-content fancy-modal">
+              <span class="close" onclick="closeModal('networking')">&times;</span>
+              <h4>Advanced Computer Networking Teacher Assistant | Grader</h4>
+              <p>Following my experience in Cybersecurity, I supported networking coursework—this time focusing on TCP/IP, routing, and subnetting 🌐📡. I assisted students during labs, helping them troubleshoot configurations using tools like Wireshark and Linux systems 🧪🐧.</p>
+              <p>I contributed to creating assignments and lab materials aligned with the course objectives ✍️📂. I was also responsible for grading and giving feedback that encouraged deeper understanding 📘💬.</p>
+              <p>This role further sharpened my technical skills and my ability to communicate complex ideas clearly 🤝🔧.</p>
             </div>
-        </div>
-
-        <div id="ecdc" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('ecdc')">&times;</span>
-                <h4>Early Childhood Development Center Teacher Assistant</h4>
-                <p> </p>
-                <p>In my role at the Early Childhood Development Center, I supported young children’s learning and growth through interactive activities and problem-solving exercises 🌼🧸. While not directly related to software development, this experience enhanced my ability to communicate effectively, simplify complex ideas, and remain adaptable in fast-changing environments—skills that translate seamlessly to my work as a developer.</p>
-                <p>Collaborating with educators to create a nurturing environment refined my organizational and teamwork skills, while working closely with children on tasks like pattern recognition and social skills strengthened my patience and attention to detail, qualities I bring into debugging and optimizing code 🧩💻.</p>
-                <p>This role has helped me grow as a communicator, listener, and problem-solver—traits I use daily when collaborating with teams and ensuring a seamless user experience 🧑‍💻💡.</p>
+          </div>
+          
+          <!-- 🧸 ECDC Modal -->
+          <div id="ecdc" class="modal">
+            <div class="modal-content fancy-modal">
+              <span class="close" onclick="closeModal('ecdc')">&times;</span>
+              <h4>Early Childhood Development Center Teacher Assistant</h4>
+              <p>In my role at the Early Childhood Development Center, I supported young children’s learning and growth through interactive activities and problem-solving exercises 🌼🧸.</p>
+              <p>Though not tech-specific, it helped me learn to simplify complex ideas, communicate with clarity, and adapt quickly—skills I use daily as a developer 💬⚡.</p>
+              <p>Collaborating with educators improved my teamwork and organization, and working with kids enhanced my patience and attention to detail—especially useful when debugging or refining UI experiences 🧩💻.</p>
+              <p>This role helped shape me into a better communicator, listener, and teammate 👩‍💻💡.</p>
             </div>
-        </div>
+          </div>
 
         <!-- Projects Section -->
         <section id="projects" class="section">
@@ -281,7 +632,7 @@
 
         <!-- Skills Section -->
         <section id="skills" class="section">
-            <h2>Skills</h2>
+            <h2 style="color: #00ffff;">Skills</h2>
             <ul class="skills-list">
                 <li><strong>Development:</strong> Java, C, SQL, Oracle, HTML, CSS, JavaScript, jQuery, React, Bootstrap</li>
                 <li><strong>Tools:</strong> Liferay, Jenkins, Jira, Microsoft Office, JMP</li>
@@ -290,15 +641,15 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="project-card">
-            <h2>Contact</h2>
-            <p><a href="mailto:boyapalliprathibha306@gmail.com">boyapalliprathibha306@gmail.com</a></p>
-            <p>+1 (463)-273-6225</p>
-            <p><a href="https://www.linkedin.com/in/prathibha-boyapalli-a46391193/" target="_blank">LinkedIn</a></p>
-            <p><a href="https://github.com/Prathibha-B" target="_blank">GitHub</a></p>
+        <section id="contact" class="section contact-section">
+            <div class="contact-card">
+              <h2> Contact</h2>
+              <p><a href="mailto:boyapalliprathibha306@gmail.com"><i class="fas fa-envelope"></i> boyapalliprathibha306@gmail.com</a></p>
+              <p><i class="fas fa-phone-alt"></i> +1 (463)-273-6225</p>
+              <p><a href="https://www.linkedin.com/in/prathibha-boyapalli-a46391193/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+              <p><a href="https://github.com/Prathibha-B" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
             </div>
-        </section>
+          </section>
     </main>
 
     <script>

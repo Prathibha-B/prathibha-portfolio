@@ -165,6 +165,9 @@ main {
     list-style: none;
 }
 
+ul {
+    list-style: none;
+}
 .skills-list li {
     margin: 0.5rem 0;
 }
